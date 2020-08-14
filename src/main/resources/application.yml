@@ -1,0 +1,30 @@
+server:
+  tomcat:
+    uri-encoding: UTF-8
+  port: 4040
+  servlet:
+    encoding:
+      enabled: true
+      charset: UTF-8
+      force: true
+  
+spring:
+  mandatory-file-encoding: UTF-8
+  messages:
+    encoding: UTF-8
+  datasource:
+    sqlScriptEncoding: UTF-8
+    platform: postgres
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/stockpymes
+    username: postgres
+    password: root
+    hikari:
+      schema: stockers
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        default_schema: stockers
+        dialect: org.hibernate.dialect.PostgreSQL10Dialect
