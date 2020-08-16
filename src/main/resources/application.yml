@@ -16,7 +16,7 @@ spring:
     sqlScriptEncoding: UTF-8
     platform: postgres
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgres://wyzsjswuckvhai:619faddea2365680b52f4db965943935b1d6f5c66c1be19d4b419a9d09a81327@ec2-107-20-104-234.compute-1.amazonaws.com:5432/ddg8afkmuiabtv
+    url: jdbc:postgresql://wyzsjswuckvhai:619faddea2365680b52f4db965943935b1d6f5c66c1be19d4b419a9d09a81327@ec2-107-20-104-234.compute-1.amazonaws.com:5432/ddg8afkmuiabtv
     username: wyzsjswuckvhai
     password: 619faddea2365680b52f4db965943935b1d6f5c66c1be19d4b419a9d09a81327
     hikari:
