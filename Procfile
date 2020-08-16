@@ -1,0 +1,1 @@
+web: java -jar target/stockpymes-0.0.1-SNAPSHOT.jar

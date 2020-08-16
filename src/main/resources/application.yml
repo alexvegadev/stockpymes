@@ -1,7 +1,7 @@
 server:
   tomcat:
     uri-encoding: UTF-8
-  port: 4040
+  port: 5000
   servlet:
     encoding:
       enabled: true
