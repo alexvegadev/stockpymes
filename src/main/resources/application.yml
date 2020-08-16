@@ -17,8 +17,8 @@ spring:
     platform: postgres
     driver-class-name: org.postgresql.Driver
     url: jdbc:postgresql://localhost:5432/stockpymes
-    username: postgres
-    password: root
+    username: ddg8afkmuiabtv
+    password: wyzsjswuckvhai
     hikari:
       schema: stockers
   jpa:
