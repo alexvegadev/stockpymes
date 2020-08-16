@@ -19,10 +19,10 @@ public class Client {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	@Column(name = "firstname", nullable = false, length = 100)
+	@Column(name = "firstname", length = 100)
 	private String firstName;
 	
-	@Column(name = "lastname", nullable = false, length = 100)
+	@Column(name = "lastname", length = 100)
 	private String lastName;
 
 	public Long getId() {

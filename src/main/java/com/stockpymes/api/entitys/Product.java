@@ -19,25 +19,25 @@ public class Product {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	@Column(name = "name", nullable = false, length = 100)
+	@Column(name = "name", length = 100)
 	private String name;
 	
-	@Column(name = "category", nullable = false, length = 100)
+	@Column(name = "category", length = 100)
 	private String category;
 	
-	@Column(name = "image", nullable = false, length = 100)
+	@Column(name = "image", length = 100)
 	private String image;
 	
-	@Column(name = "price", nullable = false)
+	@Column(name = "price")
 	private Double price;
 	
-	@Column(name = "pricetosell", nullable = false)
+	@Column(name = "pricetosell")
 	private Double priceToSell;
 	
-	@Column(name = "priceperunit", nullable = false)
+	@Column(name = "priceperunit")
 	private Double pricePerUnit;
 	
-	@Column(name = "quantity", nullable = false)
+	@Column(name = "quantity")
 	private Integer quantity;
 
 	public Long getId() {
