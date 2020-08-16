@@ -16,9 +16,9 @@ spring:
     sqlScriptEncoding: UTF-8
     platform: postgres
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:5432/stockpymes
-    username: ddg8afkmuiabtv
-    password: wyzsjswuckvhai
+    url: jdbc:postgresql://localhost:5432/ddg8afkmuiabtv
+    username: wyzsjswuckvhai
+    password: 619faddea2365680b52f4db965943935b1d6f5c66c1be19d4b419a9d09a81327
     hikari:
       schema: stockers
   jpa:
