@@ -23,3 +23,10 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQL10Dialect
+        
+stockpymes:
+    cmd:
+        jwtExpirationMs: 86400000
+        jwtSecret: claveSecreta7
+  
+  

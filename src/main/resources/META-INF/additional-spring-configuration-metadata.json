@@ -1,0 +1,12 @@
+{"properties": [
+  {
+    "name": "stockpymes.cmd.jwt-secret",
+    "type": "java.lang.String",
+    "description": "A description for 'stockpymes.cmd.jwt-secret'"
+  },
+  {
+    "name": "stockpymes.cmd.jwtExpirationMs",
+    "type": "java.lang.String",
+    "description": "A description for 'stockpymes.cmd.jwtExpirationMs'"
+  }
+]}
