@@ -34,8 +34,7 @@ public class ProductsREST {
 	}
 	
 	@RequestMapping(value = "{productId}")
-	public ResponseEntity<Product> getProduct(@PathVariable(name = "productId") Long productId) 
-	{
+	public ResponseEntity<Product> getProduct(@PathVariable("productId") Long productId) {
 		var optional = productsDAO.findById(productId);
 		if (optional.isPresent()) {
 			return ResponseEntity.ok(optional.get());

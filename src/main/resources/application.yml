@@ -13,6 +13,9 @@ spring:
   messages:
     encoding: UTF-8
   datasource:
+    initialization-mode: always
+    data:
+    - classpath:data.sql
     sqlScriptEncoding: UTF-8
     platform: postgres
     driver-class-name: org.postgresql.Driver

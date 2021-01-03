@@ -19,6 +19,9 @@ public class Product {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
+	@Column(name = "bard_code")
+	private String barCode;
+	
 	@Column(name = "name", length = 100)
 	private String name;
 	
@@ -102,6 +105,14 @@ public class Product {
 
 	public void setQuantity(Integer quantity) {
 		this.quantity = quantity;
+	}
+	
+	public String getBarCode() {
+		return barCode;
+	}
+	
+	public void setBarCode(String barCode) {
+		this.barCode = barCode;
 	}
 	
 }
