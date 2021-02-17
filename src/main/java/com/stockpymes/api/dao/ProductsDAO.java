@@ -9,5 +9,4 @@ import com.stockpymes.api.entitys.Product;
  * @author Alex P. Vega
  */
 public interface ProductsDAO extends JpaRepository<Product, Long> {
-
 }
