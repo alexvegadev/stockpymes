@@ -3,6 +3,7 @@ package com.stockpymes.api.rest;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -29,10 +30,19 @@ public class ConsumesREST {
 	private ConsumesDAO consumeRepo;
 	
 	@GetMapping
-	public ResponseEntity<List<Consume>> getConsumes(){
-		var list = consumeRepo.findAll();
-		return ResponseEntity.ok(list);
+	public ResponseEntity<List<Consume>> getConsumes(@RequestParam(required = false, defaultValue = "0") Integer page, @RequestParam(required = false, defaultValue = "10") Integer limit){
+		var pager = PageRequest.of(page, limit);
+		var list = consumeRepo.findAll(pager);
+		return ResponseEntity.ok(list.getContent());
 	}
+	
+	@GetMapping("sum")
+	public ResponseEntity<Object> getSumConsumes(@RequestParam(required = true) Long id, @RequestParam(required = true) Integer year,@RequestParam(required = true) Integer month) {
+		var sum = consumeRepo.sumConsumesByClientId(id, year, month);
+		
+		return ResponseEntity.ok(sum);
+	}
+	
 	
 	@RequestMapping(value = "{clientId}")
 	public ResponseEntity<List<Consume>> getConsumesByClient(@PathVariable(name = "clientId", required = false) Long clientId, @RequestParam(name = "productId", required = false) Long productId){

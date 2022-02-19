@@ -36,6 +36,12 @@ public class Consume {
 	@Column(name = "consume_date", length = 100)
 	private String consumeDate;
 	
+	/**
+	 * this represents the consume hour
+	 */
+	@Column(name = "consume_hour", length = 100)
+	private String consumeHour;
+	
 	@Column(name = "quantity")
 	private int quantity;
 	
@@ -86,6 +92,14 @@ public class Consume {
 		this.quantity = quantity;
 	}
 	
+	
+	public String getConsumeHour() {
+		return consumeHour;
+	}
+	
+	public void setConsumeHour(String consumeHour) {
+		this.consumeHour = consumeHour;
+	}
 	
 	
 }

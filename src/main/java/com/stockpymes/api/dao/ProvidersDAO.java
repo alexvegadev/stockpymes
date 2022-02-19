@@ -1,12 +1,13 @@
 package com.stockpymes.api.dao;
 
-import org.springframework.data.jpa.repository.JpaRepository;
+
+import org.springframework.data.repository.PagingAndSortingRepository;
 
 import com.stockpymes.api.entitys.Provider;
 
 /**
  * @author Alex P. Vega
  */
-public interface ProvidersDAO extends JpaRepository<Provider, Long> {
-
+public interface ProvidersDAO extends PagingAndSortingRepository<Provider, Long> {
+	
 }

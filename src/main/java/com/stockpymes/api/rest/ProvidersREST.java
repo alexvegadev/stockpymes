@@ -3,6 +3,7 @@ package com.stockpymes.api.rest;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.stockpymes.api.dao.ProvidersDAO;
@@ -29,8 +31,10 @@ public class ProvidersREST {
 	private ProvidersDAO providersDAO;
 	
 	@GetMapping
-	public ResponseEntity<List<Provider>> getProviders() {
-		return ResponseEntity.ok(providersDAO.findAll());
+	public ResponseEntity<List<Provider>> getProviders(@RequestParam(required = false, defaultValue = "0") Integer page, @RequestParam(required = false, defaultValue = "10") Integer limit) {
+		var pager = PageRequest.of(page, limit);
+		var list = providersDAO.findAll(pager);
+		return ResponseEntity.ok(list.getContent());
 	}
 	
 	@RequestMapping(value = "{providerId}")
